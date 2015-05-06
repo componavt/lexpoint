@@ -29,8 +29,25 @@ class WelcomeController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-	{
-		return view('welcome');
+    {
+        $monolog = \Log::getMonolog();
+
+        $items = array('items' => ['Pack luggage', 'Go to airport', 'Arrive in San Juan']);
+
+        $monolog->pushHandler(new \Monolog\Handler\FirePHPHandler());
+        $monolog->addInfo('Log Message', array('items' => $items));
+
+        // dd( $items );
+        //\Log::debug($items);
+
+/*\Debugbar::error('Something is definitely going wrong.');
+
+\Debugbar::info($items);
+\Debugbar::error('Error!');
+\Debugbar::warning('Watch out…');
+\Debugbar::addMessage('Another message', 'mylabel');
+  */
+        return view('welcome');
 	}
 
 }
