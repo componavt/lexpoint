@@ -1,4 +1,6 @@
 /vendor
 /node_modules
-.env
+#.env
 /storage
+/bootstrap/cache
+#/config/database.php
