@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: lexpoint
+        psr4_prefix: lexpoint
+        src_path: app
