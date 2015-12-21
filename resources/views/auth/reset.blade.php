@@ -6,13 +6,10 @@ Lexpoint
 
 @section('content')
 
-<form  class="form-signin" role="form" method="POST" action="/password/reset">
 
- {!! csrf_field() !!}
+{!! Form::open(array('url'=>'/password/reset', 'class'=>'form-signin')) !!}
 
         <h2 class="form-signin-heading">{{trans('user.reset_pass')}}</h2>
-
-	<input type="hidden" name="token" value="{{ $token }}">
 
 	@if (count($errors) > 0)
         <ul>
@@ -22,10 +19,14 @@ Lexpoint
         </ul>
 	@endif
 
-	<input type="text" class="form-control" placeholder="Email"  value="{{ old('email') }}" name="email" required/>
-        <input type="password" class="form-control" placeholder="{{trans('user.password')}}" name="password" required />
-        <input type="password" class="form-control" placeholder="{{trans('user.password_confirmation')}}" name="password_confirmation" required />
-	<button class="btn btn-lg btn-primary btn-block" type="submit">{{trans('user.to_reset')}}</button>
-</form>
+	{!! Form::hidden('token',$token) !!}
+
+        {!! Form::email('email',old('email'),array('placeholder'=>'Email', 'class'=>'form-control', 'required'=>'true')) !!}
+        {!! Form::input('password','password',null,array('placeholder'=>trans('user.password'),'class'=>'form-control', 'required'=>'true')) !!}
+        {!! Form::input('password','password_confirmation',null,array('placeholder'=>trans('user.password_confirmation'),'class'=>'form-control', 'required'=>'true')) !!}
+
+        {!! Form::submit(trans('user.to_reset'),array('class'=>'btn btn-lg btn-primary btn-block')) !!}
+
+{!! Form::close() !!}
 
 @stop

@@ -19,6 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
             $table->rememberToken();
             $table->timestamps();
+	    $table->boolean('isActive')->default(false);
+	    $table->string('activationCode');
+	    $table->string('status')->default('user'); //user, expert, admin
         });
     }
 

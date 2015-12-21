@@ -6,18 +6,26 @@ Lexpoint
 
 @section('content')
 
-<form  class="form-signin" role="form" method="POST" action="/auth/register">
-
- {!! csrf_field() !!}
+{!! Form::open(array('url'=>'/auth/register', 'class'=>'form-signin')) !!}
 
         <h2 class="form-signin-heading">{{trans('user.register')}}</h2>
 
+        @if (count($errors) > 0)
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
 
-	<input type="text" class="form-control" placeholder="{{trans('user.name')}}"  value="{{ old('name') }}" name="name" required/>
-	<input type="text" class="form-control" placeholder="Email"  value="{{ old('email') }}" name="email" required/>
-        <input type="password" class="form-control" placeholder="{{trans('user.password')}}" name="password" required />
-        <input type="password" class="form-control" placeholder="{{trans('user.password_confirmation')}}" name="password_confirmation" required />
-	<button class="btn btn-lg btn-primary btn-block" type="submit">{{trans('user.register')}}</button>
-</form>
+	{!! Form::text('name',old('name'),array('placeholder'=>trans('user.name'), 'class'=>'form-control', 'required'=>'true')) !!} 
+	{!! Form::email('email',old('email'),array('placeholder'=>'Email', 'class'=>'form-control', 'required'=>'true')) !!} 
+	{!! Form::input('password','password',null,array('placeholder'=>trans('user.password'), 
+'class'=>'form-control', 'required'=>'true')) !!} 
+	{!! Form::input('password','password_confirmation',null,array('placeholder'=>trans('user.password_confirmation'), 
+'class'=>'form-control', 'required'=>'true')) !!} 
+	{!! Form::submit(trans('user.register'),array('class'=>'btn btn-lg btn-primary btn-block')) !!}
+
+{!! Form::close() !!}
 
 @stop

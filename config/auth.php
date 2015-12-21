@@ -64,4 +64,9 @@ return [
         'expire' => 60,
     ],
 
+    'user_status_list' => [
+	'user',
+	'admin',
+    ],
+
 ];

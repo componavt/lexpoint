@@ -30,5 +30,7 @@ class Kernel extends HttpKernel
         'auth' => \lexpoint\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \lexpoint\Http\Middleware\RedirectIfAuthenticated::class,
+	'admin' => \lexpoint\Http\Middleware\AdminAuthentication::class,
+
     ];
 }
