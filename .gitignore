@@ -3,3 +3,4 @@
 .env
 /storage
 /bootstrap/cache
+/config/database.php

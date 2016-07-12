@@ -55,9 +55,9 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', ''),
-            'username'  => env('DB_USERNAME', ''),
-            'password'  => env('DB_PASSWORD', ''),
+            'database'  => env('DB_DATABASE', 'lexpoint'),
+            'username'  => env('DB_USERNAME', 'lexpoint'),
+            'password'  => env('DB_PASSWORD', 'lexpointwlog'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
@@ -67,23 +67,23 @@ return [
                 'mysql2' => [
                         'driver'    => 'mysql',
                         'host'      => '192.168.1.55',
-                        'database'  => '',
+                        'database'  => 'ruwikt',
                         'charset'   => 'utf8',
                         'collation' => 'utf8_unicode_ci',
                         'prefix'    => '',
-                        'username'  => '',
-                        'password'  => '',
+                        'username'  => 'pw_user',
+                        'password'  => 'FzO3c&K',
                 ],
 
                 'mysql3' => [
                         'driver'    => 'mysql',
                         'host'      => 'localhost',
-                        'database'  => '',
+                        'database'  => 'enwikt',
                         'charset'   => 'utf8',
                         'collation' => 'utf8_unicode_ci',
                         'prefix'    => '',
-                        'username'  => '',
-                        'password'  => '',
+                        'username'  => 'pw_user',
+                        'password'  => 'FzO3c&K',
                 ],
 
 
