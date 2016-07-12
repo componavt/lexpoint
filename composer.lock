@@ -4,9 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "04a6d2d05f85a4a9031cec4ceb9843e3",
-    "content-hash": "09a48dc7cddb0f6d91b8114087caaf70",
+    "hash": "1fb3baddce0f9b2d5c77acc4a7287621",
+    "content-hash": "ab635bf5bf4d8ff965cb695230a65363",
     "packages": [
+        {
+            "name": "cijic/phpmorphy",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cijic/phpmorphy.git",
+                "reference": "093da0bcdfe51296fff9df3a62e05313caa049d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cijic/phpmorphy/zipball/093da0bcdfe51296fff9df3a62e05313caa049d7",
+                "reference": "093da0bcdfe51296fff9df3a62e05313caa049d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "libs/phpmorphy/src/common.php",
+                    "libs/phpmorphy/src/"
+                ],
+                "psr-4": {
+                    "cijic\\phpMorphy\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chiril Teterea",
+                    "email": "altcode@ya.ru",
+                    "role": "Developer"
+                }
+            ],
+            "description": "phpMorphy - morphological analyzer library for Russisan, English languages.",
+            "homepage": "https://github.com/cijic/phpmorphy",
+            "keywords": [
+                "phpmorphy"
+            ],
+            "time": "2015-09-19 11:27:14"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "2.0.0",
@@ -60,6 +105,49 @@
                 "preload"
             ],
             "time": "2015-06-28 21:39:13"
+        },
+        {
+            "name": "componavt/piwidict",
+            "version": "v0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/componavt/piwidict.git",
+                "reference": "549ceb57ba178342eaf63c805b05d6aa173ecd23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/componavt/piwidict/zipball/549ceb57ba178342eaf63c805b05d6aa173ecd23",
+                "reference": "549ceb57ba178342eaf63c805b05d6aa173ecd23",
+                "shasum": ""
+            },
+            "require": {
+                "cijic/phpmorphy": "^0.3.0",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "componavt\\piwidict\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Krizhanovsky",
+                    "email": "andrew.krizhanovsky@gmail.com"
+                }
+            ],
+            "description": "Machine-readable Wiktionary PHP API",
+            "homepage": "https://github.com/componavt/piwidict",
+            "keywords": [
+                "wiktionary"
+            ],
+            "time": "2016-07-07 09:03:53"
         },
         {
             "name": "danielstjules/stringy",
@@ -261,6 +349,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
+            "abandoned": "laravelcollective/html",
             "time": "2015-01-01 16:31:18"
         },
         {
