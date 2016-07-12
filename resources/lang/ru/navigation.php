@@ -21,7 +21,7 @@ return array(
 
         "algorithms" => "Алгоритмы",
 
-        "wordgames" => "Словоигры",
+        "wordgames" => "Игры",
 
 );
 

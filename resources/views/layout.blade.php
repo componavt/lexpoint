@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>@yield('title')</title>
+        <title>Lexpoint :: @yield('title')</title>
         <meta name="keywords" content="">
         <meta name="description" content="">
         <meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,9 +43,9 @@
                         <li><a href="/algorithms">{{trans('navigation.algorithms')}}</a></li>
                         <li><a href="/wordgames">{{trans('navigation.wordgames')}}</a></li>
 
-			@if (Auth::check() && Auth::user()->status=="admin")
-			<li><a href="/admin">Admin</a></li>
-			@endif
+            @if (Auth::check() && Auth::user()->status=="admin")
+            <li><a href="/admin">Admin</a></li>
+            @endif
 
                         @foreach ( trans('navigation.locale_links') as $link_url => $link_text)
                         <li><a href="/setlocale/{{ $link_url }}">{{ $link_text }}</a></li>
@@ -54,31 +54,31 @@
 
 
                     @if (!Auth::check())
-		{!! Form::open(array('url'=>'/auth/login', 'method'=>'get', 'class'=>'navbar-form navbar-right')) !!}
-			 {!! Form::submit(trans('user.log_in'),array('class'=>'btn btn-success')) !!}
+        {!! Form::open(array('url'=>'/auth/login', 'method'=>'get', 'class'=>'navbar-form navbar-right')) !!}
+             {!! Form::submit(trans('user.log_in'),array('class'=>'btn btn-success')) !!}
                          <a href="/auth/register" class="btn btn-success"> {{trans('user.register')}} </a>
-		{!! Form::close() !!}
+        {!! Form::close() !!}
                     @else
-		{!! Form::open(array('url'=>'/auth/logout', 'class'=>'navbar-form navbar-right', 'method'=>'get')) !!}
-			 {!! Form::submit(Auth::user()->name.': '.trans('user.logout'),array('class'=>'btn btn-success')) !!}
-		{!! Form::close() !!}
+        {!! Form::open(array('url'=>'/auth/logout', 'class'=>'navbar-form navbar-right', 'method'=>'get')) !!}
+             {!! Form::submit(Auth::user()->name.': '.trans('user.logout'),array('class'=>'btn btn-success')) !!}
+        {!! Form::close() !!}
                     @endif
 
                 </div><!--/.navbar-collapse -->
             </div>
         </div>
 
-	<div class="jumbotron">
-	    <div class="container">
+    <div class="jumbotron">
+        <div class="container">
  
 @yield('content')
 
- 	    </div>
-	</div>
+        </div>
+    </div>
         <div id="footer">
             <div class="container">
                 <div class="col-md-4">
-                    &copy; 2015 Lexpoint
+                    &copy; 2015-2016 Lexpoint
                 </div>
             </div>
         </div>

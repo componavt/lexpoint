@@ -1,13 +1,14 @@
 @extends('layout')
 
 @section('title')
-Wiktionary lab
+{!!trans('navigation.wiktionary_lab')!!}
 @stop
 
 @section('content')
-<h1>Wictionary lab</h1>
+<h1>{!!trans('navigation.wiktionary_lab')!!}</h1>
     <ul>
-        <li><a href="/lab/stats/">Statistics</a></li>
+        <li><a href="/lab/word/">{!!trans('lab.word')!!}</a></li>
+        <li><a href="/lab/stats/">{!!trans('lab.stats')!!}</a></li>
     </ul>
 @stop
 

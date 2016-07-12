@@ -16,7 +16,7 @@ Route::get('', 'IndexController@index');
 Route::get('setlocale/{locale}', function ($locale) {
     
     if (in_array($locale, Config::get('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык 
-    	Session::put('locale', $locale);                    # И устанавливаем его в сессии под именем locale
+        Session::put('locale', $locale);                    # И устанавливаем его в сессии под именем locale
     }
 
     return redirect()->back();                              # Редиректим его <s>взад</s> на ту же страницу
@@ -42,23 +42,24 @@ Route::get('password/reset/{token?}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 Route::group([
-	'prefix'=>'admin', 
-	'namespace'=>'Admin', 
-	'middleware'=>'admin'
-	], function() {
+    'prefix'=>'admin', 
+    'namespace'=>'Admin', 
+    'middleware'=>'admin'
+    ], function() {
 
-	Route::get('', function() {
-		return view('admin.index');
-	});
-	Route::post('user/find','UserController@postFind');
-	Route::resource('user','UserController');
+    Route::get('', function() {
+        return view('admin.index');
+    });
+    Route::post('user/find','UserController@postFind');
+    Route::resource('user','UserController');
 
 });
 
+    Route::get('lab/word', 'Lab\WordController@index');
     Route::get('lab/stats/languages', 'Lab\LanguagesController@index');
     Route::get('lab/stats', function() {
-		return view('lab.stats.index');
-		});
+        return view('lab.stats.index');
+        });
     Route::get('lab',  function() {
                 return view('lab.index');
                 });

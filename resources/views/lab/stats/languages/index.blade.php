@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-Languages
+{!!trans('lab.languages')!!}
 @stop
 
 @section('headExtra')
@@ -19,18 +19,18 @@ $(document).ready(function()
 
 @section('content')
 
-        <h2>Languages</h2>
+        <h2>{!!trans('lab.languages')!!}</h2>
         <p>{{ Lang::get('total.total_count',array('count'=>$total_count)) }}</p>
     <table id="languages" class="table tablesorter">
-	<thead>
+    <thead>
         <tr>
-            <th>Language name</th>
-            <th>Language code</th>
-            <th>Number of foreign parts of speech (POS) in the table index_XX</th>
-            <th>Number of translation pairs in the table index_XX:</th>
+            <th>{!!trans('lab.lang_name')!!}</th>
+            <th>{!!trans('lab.lang_code')!!}</th>
+            <th>{!!trans('lab.n_foreign_POS')!!}</th>
+            <th>{!!trans('lab.n_translations')!!}</th>
         </tr>
-	</thead>
-	<tbody>
+    </thead>
+    <tbody>
         @foreach($languages as $language)
         <tr>
             <td>{{$language->name}}</td>
@@ -39,7 +39,7 @@ $(document).ready(function()
             <td>{{$language->n_translations}}</td>
         </tr>
         @endforeach
-	</tbody>
+    </tbody>
     </table>
 @stop
 

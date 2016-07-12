@@ -53,7 +53,7 @@ return [
     */
 
     'locale' => 'en',
-    'locales' => ['ru','en'],	
+    'locales' => ['ru','en'],   
 
     /*
     |--------------------------------------------------------------------------
@@ -137,7 +137,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-	Illuminate\Html\HtmlServiceProvider::class,
+    Illuminate\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -146,7 +146,7 @@ return [
         lexpoint\Providers\AuthServiceProvider::class,
         lexpoint\Providers\EventServiceProvider::class,
         lexpoint\Providers\RouteServiceProvider::class,
-
+        //componavt\piwidict\PiwidictServiceProvider::class,
     ],
 
     /*
@@ -169,6 +169,7 @@ return [
         'Bus'       => Illuminate\Support\Facades\Bus::class,
         'Cache'     => Illuminate\Support\Facades\Cache::class,
         'Config'    => Illuminate\Support\Facades\Config::class,
+        'Controller'=> Illuminate\Routing\Controller::class,
         'Cookie'    => Illuminate\Support\Facades\Cookie::class,
         'Crypt'     => Illuminate\Support\Facades\Crypt::class,
         'DB'        => Illuminate\Support\Facades\DB::class,
@@ -195,8 +196,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-	'Html'      => Illuminate\Html\HtmlFacade::class,
-    	'Form'      => Illuminate\Html\FormFacade::class,
+    'Html'      => Illuminate\Html\HtmlFacade::class,
+        'Form'      => Illuminate\Html\FormFacade::class,
 
     ],
 

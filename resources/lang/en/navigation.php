@@ -15,7 +15,7 @@ return array(
         |
         */
 
-    "locale_links" => array("ru"=>"Russian version"),
+        "locale_links" => array("ru"=>"Russian version"),
 
         "wiktionary_lab" => "Wiktionary lab",
 
