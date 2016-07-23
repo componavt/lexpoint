@@ -4,6 +4,10 @@
 Lexpoint login
 @stop
 
+@section('headExtra')
+{!!Html::style('css/user.css')!!}
+@stop
+
 @section('content')
 
 

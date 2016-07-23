@@ -21,6 +21,7 @@ return array(
         'n_translations' => 'Количество пар переводов в таблице index_XX',
         'output_first' => 'вывести первые',
         'pos' => 'Часть речи',
+        'restriction_limit_mess' => 'Ограничение на поиск не более :limit записей',
         'source_page_at' => 'Исходная страница на',
         'stats' => 'Статистика',
         'sub_search' => 'часть слова',

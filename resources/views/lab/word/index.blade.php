@@ -45,7 +45,11 @@
         {!! Form::close() !!}
 
         @if ($search_word)
-        <p class="found">{{ Lang::get('total.total_count',array('count'=>$count_total)) }}</p>
+        <p class="found">{{ $total_message }}
+            @if ($restriction_message)
+            <br>{{ $restriction_message }}
+            @endif
+        </p>
         @endif
 
         @foreach($words as $count => $word)

@@ -1,0 +1,13 @@
+﻿.form-signin {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.form-signin input {
+    margin-bottom: 5px;
+}
+
+.form-signin input[type='submit'] {
+    margin: 0 0 5px auto;
+    width: 150px;
+}

@@ -4,6 +4,10 @@
 Lexpoint
 @stop
 
+@section('headExtra')
+{!!Html::style('css/user.css')!!}
+@stop
+
 @section('content')
 
 
@@ -11,15 +15,15 @@ Lexpoint
 
         <h2 class="form-signin-heading">{{trans('user.reset_pass')}}</h2>
 
-	@if (count($errors) > 0)
+    @if (count($errors) > 0)
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
-	@endif
+    @endif
 
-	{!! Form::hidden('token',$token) !!}
+    {!! Form::hidden('token',$token) !!}
 
         {!! Form::email('email',old('email'),array('placeholder'=>'Email', 'class'=>'form-control', 'required'=>'true')) !!}
         {!! Form::input('password','password',null,array('placeholder'=>trans('user.password'),'class'=>'form-control', 'required'=>'true')) !!}

@@ -20,6 +20,7 @@ return array(
         'n_translations' => 'Number of translation pairs in the table index_XX',
         'output_first' => 'output the first',
         'pos' => 'Part of speach',
+        'restriction_limit_mess' => 'Restriction on the search for a maximum of :limit records',
         'source_page_at' => 'Source page at',
         'stats' => 'Statistics',
         'sub_search' => 'substring search',

@@ -4,6 +4,10 @@
 Lexpoint
 @stop
 
+@section('headExtra')
+{!!Html::style('css/user.css')!!}
+@stop
+
 @section('content')
 
 {!! Form::open(array('url'=>'/password/email', 'class'=>'form-signin')) !!}

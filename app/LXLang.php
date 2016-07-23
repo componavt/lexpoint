@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 class LXLang extends Model {
 
 
-	protected $connection = 'mysql2';
+    protected $connection = 'ruwikt';
 
-	protected $table = 'lang';
+    protected $table = 'lang';
 
 }

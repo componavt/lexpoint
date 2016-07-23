@@ -27,15 +27,26 @@ public function index(Request $request) {
     }
 
     $count_total = 0;
+    $total_message = $restriction_message = '';
 
     $words = array();
 
     if ($search_word) {
         $tpage = new TPage();
+        $count_total = $tpage->countPageByTitle($search_title);
+
+        $limit_request = 100;
+        Piwidict::setLimitRequest($limit_request);
+        
         $pageObj_arr = $tpage->getByTitle($search_title); 
 //        $pageObj_arr = TPage::getByTitleIfExists($search_title);  // if these pages are in Wiktionary
-        $count_total = sizeof($pageObj_arr);
- 
+
+        $total_message = \Lang::get('total.total_count',array('count'=>$count_total));
+
+        if ($limit_request >0 && $limit_request < $count_total) {
+            $restriction_message = \Lang::get('lab.restriction_limit_mess',array('limit'=>$limit_request));
+        } 
+        
         if ($pageObj_arr != NULL) {
             $count = 1;
 
@@ -172,7 +183,8 @@ public function index(Request $request) {
         return view('lab.word.index')->with(array('search_word' => $search_word,
                                                   'type_search' => $type_search,
                                                   'output_first' => $output_first,
-                                                  'count_total' => $count_total,
+                                                  'total_message' => $total_message,
+                                                  'restriction_message' => $restriction_message,
                                                   'words'=> $words
                                                  )
                                            );
