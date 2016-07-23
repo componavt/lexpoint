@@ -31,7 +31,9 @@ public function index(Request $request) {
     $words = array();
 
     if ($search_word) {
-        $pageObj_arr = TPage::getByTitleIfExists($search_title);  // !!TODO расширить функцию параметром is_in_wiktionary 
+        $tpage = new TPage();
+        $pageObj_arr = $tpage->getByTitle($search_title); 
+//        $pageObj_arr = TPage::getByTitleIfExists($search_title);  // if these pages are in Wiktionary
         $count_total = sizeof($pageObj_arr);
  
         if ($pageObj_arr != NULL) {
@@ -41,7 +43,9 @@ public function index(Request $request) {
                 foreach ($pageObj_arr as $pageObj) {
                     $word = array();
                     $word['title']  = $pageObj->getPageTitle();
-                    $word['link']   = $pageObj->getURLWithLinkText($word['title']);
+//$word['title']  .= ' '. $pageObj->isInWiktionary();
+//$pageObj->getID();
+                    $word['link']  = $pageObj->isInWiktionary() ? $pageObj->getURLWithLinkText($word['title']) : '';
 
                     $word['lang_pos'] = array();
                     $lang_pos_arr = $pageObj -> getLangPOS();

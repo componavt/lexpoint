@@ -8,7 +8,7 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
     "illuminate/html": "5.*",
-        "componavt/piwidict": "^0.2.1"
+        "componavt/piwidict": "^0.2.9"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -21,8 +21,7 @@
             "database"
         ],
         "psr-4": {
-            "lexpoint\\": "app/",
-            "componavt\\piwidict\\": "vendor/componavt/piwidict/src"
+            "lexpoint\\": "app/"
         }
     },
     "autoload-dev": {

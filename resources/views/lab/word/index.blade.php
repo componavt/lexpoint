@@ -51,7 +51,9 @@
         @foreach($words as $count => $word)
         <div class="word-block">    
             <h2 class="word-title">{{ $count }}. {{ $word['title']}}</h2>
+            @if ($word['link'])
             <p>{!!trans('lab.source_page_at')!!} {!! $word['link'] !!}</p>
+            @endif
 
             @foreach($word['lang_pos'] as $lang_pos)
             <div class="lang-pos-block">    
