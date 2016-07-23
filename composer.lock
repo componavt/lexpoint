@@ -108,16 +108,16 @@
         },
         {
             "name": "componavt/piwidict",
-            "version": "v0.2.5",
+            "version": "v0.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/componavt/piwidict.git",
-                "reference": "0b34b1e762984a8710a8832cd9b5eb6416305477"
+                "reference": "6373a54e3fd9b1c51362ed994db3ee7644d5a0bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/componavt/piwidict/zipball/0b34b1e762984a8710a8832cd9b5eb6416305477",
-                "reference": "0b34b1e762984a8710a8832cd9b5eb6416305477",
+                "url": "https://api.github.com/repos/componavt/piwidict/zipball/6373a54e3fd9b1c51362ed994db3ee7644d5a0bb",
+                "reference": "6373a54e3fd9b1c51362ed994db3ee7644d5a0bb",
                 "shasum": ""
             },
             "require": {
@@ -145,7 +145,7 @@
             "keywords": [
                 "wiktionary"
             ],
-            "time": "2016-07-20 13:33:51"
+            "time": "2016-07-22 09:33:02"
         },
         {
             "name": "danielstjules/stringy",

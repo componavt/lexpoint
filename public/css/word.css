@@ -1,0 +1,36 @@
+.found {
+    font-style: italic;
+    margin: 20px 0 10px;
+}
+
+.word-block {
+    border-bottom: 1px solid #ccc;
+}
+
+.lang-pos-block:not(:last-child) {
+    border-bottom: 1px dashed #ccc;
+}
+
+.meaning-label {
+    color: #2a6496;
+    font-style: italic;
+}
+
+.lang-pos-lang {
+    color: #5cb85c;
+}
+
+.word-title {
+    color: #2a6496;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.relation-block {
+    margin-left: 20px;
+}
+
+.all-translations {
+    display: none;
+    margin-left: 20px; 
+}

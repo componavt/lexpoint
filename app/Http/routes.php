@@ -1,4 +1,13 @@
 <?php
+use \piwidict\Piwidict;
+
+$wikt_lang = 'ru';
+Piwidict::setWiktLang ($wikt_lang);
+Piwidict::setDatabaseConnection(env('DB_WIKT_HOST'), 
+                                env('DB_WIKT_USERNAME'), 
+                                env('DB_WIKT_USERPASS'), 
+                                env('DB_WIKT_DATABASE_'.strtoupper($wikt_lang)));
+
 
 /*
 |--------------------------------------------------------------------------

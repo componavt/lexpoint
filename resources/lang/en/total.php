@@ -14,13 +14,17 @@ return [
 
     '0' => "no",
     '1' => "yes",
+    'find' => 'Find',
+    "no_records" => "There are no :name",
     'notification_message' => 'Notification message from Lexpoint',
     'page_not_found' => 'Sorry, the page you are looking for could not be found.',
-    'save' => 'Save',
-    'find' => 'Find',
-    "total_count" => ":count records are found.",
-    "no_records" => "There are no :name",
+    "records" => "records",
     "search" => "Search",
+    'save' => 'Save',
+
+    'hide' => 'hide',
+    'show' => 'show',
+    "total_count" => ":count records are found.",
     "welcome" =>'
 <p>Welcome to Lexpoint - the linguistics & research site working with
 data extracted from Russian Wiktionary and English Wiktionary.</p>
