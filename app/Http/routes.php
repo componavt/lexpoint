@@ -64,6 +64,11 @@ Route::group([
 
 });
 
+/*Route::get('/socialite/{provider}', [ 
+        'as' => 'socialite.auth',
+        'Auth\SocialAuthController@redirect']);*/
+Route::get('/socialite/{provider}/callback', 'Auth\SocialAuthController@callback');
+
 Route::get(
     '/socialite/{provider}',
     [ 
@@ -73,11 +78,12 @@ Route::get(
         }
     ]
 );
-
+/*
 Route::get('/socialite/{provider}/callback', function ($provider) {
     $user = \Socialite::driver($provider)->user();
     dd($user);
 });
+*/
 
 Route::get('lab/word', 'Lab\WordController@index');
 Route::get('lab/stats/languages', 'Lab\LanguagesController@index');

@@ -36,14 +36,14 @@ return [
     ],
 
     'github' => [
-        'client_id' => '2321e5ebacece074af4a',
-        'client_secret' => '66a91ffc3019bf7794448c61584ff1685dd4a41c',
-        'redirect' => 'http://lexpoint.krc.karelia.ru/socialite/github/callback', 
+        'client_id' => env('GITHUB_CLIENT'),
+        'client_secret' => env('GITHUB_SECRET'),
+        'redirect' => env('GITHUB_URL'), 
     ],
 
     'google' => [
-        'client_id' => '596005242313-41cr569aknhnpgjqkud3lk1gh9qg1l5b.apps.googleusercontent.com', 
-        'client_secret' => 'gMBwHgLJehCGR-8lt80Jw9uE',
-        'redirect' => 'http://lexpoint.krc.karelia.ru/socialite/google/callback', 
+        'client_id' => env('GOOGLE_CLIENT'), 
+        'client_secret' => env('GOOGLE_SECRET'),
+        'redirect' => env('GOOGLE_URL'), 
     ],
 ];
