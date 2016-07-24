@@ -1,4 +1,5 @@
 <?php
+/*
 use \piwidict\Piwidict;
 
 $wikt_lang = 'ru';
@@ -7,7 +8,7 @@ Piwidict::setDatabaseConnection(env('DB_WIKT_HOST'),
                                 env('DB_WIKT_USERNAME'), 
                                 env('DB_WIKT_USERPASS'), 
                                 env('DB_WIKT_DATABASE_'.strtoupper($wikt_lang)));
-
+*/
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,6 @@ Route::get('setlocale/{locale}', function ($locale) {
     }
 
     return redirect()->back();                              # Редиректим его <s>взад</s> на ту же страницу
-
 });
 
 // Authentication routes...
@@ -64,12 +64,27 @@ Route::group([
 
 });
 
-    Route::get('lab/word', 'Lab\WordController@index');
-    Route::get('lab/stats/languages', 'Lab\LanguagesController@index');
-    Route::get('lab/stats', function() {
-        return view('lab.stats.index');
-        });
-    Route::get('lab',  function() {
-                return view('lab.index');
-                });
+Route::get(
+    '/socialite/{provider}',
+    [ 
+        'as' => 'socialite.auth',
+        function ( $provider ) {
+            return \Socialite::driver( $provider )->redirect();
+        }
+    ]
+);
+
+Route::get('/socialite/{provider}/callback', function ($provider) {
+    $user = \Socialite::driver($provider)->user();
+    dd($user);
+});
+
+Route::get('lab/word', 'Lab\WordController@index');
+Route::get('lab/stats/languages', 'Lab\LanguagesController@index');
+Route::get('lab/stats', function() {
+    return view('lab.stats.index');
+});
+Route::get('lab',  function() {
+    return view('lab.index');
+});
 

@@ -32,4 +32,7 @@ Lexpoint login
 
 {!! Form::close() !!}
 
+<p>Login with</p>
+<p><a href="{!! route('socialite.auth', 'github') !!}">Github</a></p>
+<p><a href="{!! route('socialite.auth', 'google') !!}">Google</a></p>
 @stop

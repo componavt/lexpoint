@@ -10,6 +10,7 @@ use \piwidict\Piwidict;
 class WordController extends Controller {
 
 public function index(Request $request) {
+
     $search_word = $request->input('search_word');
     $type_search = $request->input('type_search');
     $output_first = $request->input('output_first');
@@ -32,6 +33,13 @@ public function index(Request $request) {
     $words = array();
 
     if ($search_word) {
+$wikt_lang = 'ru';
+Piwidict::setWiktLang ($wikt_lang);
+Piwidict::setDatabaseConnection(env('DB_WIKT_HOST'), 
+                                env('DB_WIKT_USERNAME'), 
+                                env('DB_WIKT_USERPASS'), 
+                                env('DB_WIKT_DATABASE_'.strtoupper($wikt_lang)));
+
         $tpage = new TPage();
         $count_total = $tpage->countPageByTitle($search_title);
 
