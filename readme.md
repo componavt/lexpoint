@@ -10,6 +10,8 @@ Lexpoint includes the code of [Piwidict](https://github.com/componavt/piwidict),
 
 This project will be interesting for peoples who like to play with words, for linguists & lexicographers, and for developers who want to work with Wiktionary data in machine-readable fromat.
 
+Read [wiki-documentation](https://github.com/componavt/lexpoint/wiki).
+
 ### License
 
 The Lexpoint is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
