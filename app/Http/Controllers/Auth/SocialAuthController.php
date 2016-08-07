@@ -25,7 +25,7 @@ class SocialAuthController extends Controller
 //        dd($user);
 // getId(), getNickname(), getName(), getEmail(), getAvatar()
 /*
-    // stroing data to our use table and logging them in
+    // storing data to our use table and logging them in
     $data = [
         'name' => $user->getName(),
         'email' => $user->getEmail()

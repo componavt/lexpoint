@@ -35,4 +35,5 @@ Lexpoint login
 <p>Login with</p>
 <p><a href="{!! route('socialite.auth', 'github') !!}">Github</a></p>
 <p><a href="{!! route('socialite.auth', 'google') !!}">Google</a></p>
+<p><a href="{!! route('socialite.auth', 'facebook') !!}">Facebook</a></p>
 @stop

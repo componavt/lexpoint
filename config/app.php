@@ -120,7 +120,7 @@ return [
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
         Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
-        Illuminate\Routing\ControllerServiceProvider::class,
+        Illuminate\Routing\ControllerServiceProvider::class, // aka: is it outdated? See http://stackoverflow.com/a/34396603/1173350
         Illuminate\Cookie\CookieServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
@@ -146,6 +146,7 @@ return [
         lexpoint\Providers\AuthServiceProvider::class,
         lexpoint\Providers\EventServiceProvider::class,
         lexpoint\Providers\RouteServiceProvider::class,
+        
         Laravel\Socialite\SocialiteServiceProvider::class,
         //componavt\piwidict\PiwidictServiceProvider::class,
     ],

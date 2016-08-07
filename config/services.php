@@ -36,14 +36,20 @@ return [
     ],
 
     'github' => [
-        'client_id' => env('GITHUB_CLIENT'),
+        'client_id' => env('GITHUB_ID'),
         'client_secret' => env('GITHUB_SECRET'),
         'redirect' => env('GITHUB_URL'), 
     ],
 
     'google' => [
-        'client_id' => env('GOOGLE_CLIENT'), 
+        'client_id' => env('GOOGLE_ID'), 
         'client_secret' => env('GOOGLE_SECRET'),
         'redirect' => env('GOOGLE_URL'), 
+    ],
+    
+    'facebook' => [
+        'client_id' => env('FB_ID'), 
+        'client_secret' => env('FB_SECRET'),
+        'redirect' => env('FB_URL'), 
     ],
 ];

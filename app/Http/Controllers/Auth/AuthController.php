@@ -137,24 +137,24 @@ class AuthController extends Controller
             );
         }
 
-// не будем сразу авторизовывать
-//        Auth::login($this->create($request->all()));
+        // не будем сразу авторизовывать
+        //        Auth::login($this->create($request->all()));
 
-// создадим пользователя, запишем в базу с кодом подтверждения в create()
-	$user = $this->create($request->all());
-	
-//генерируем URL подтверждения  
+        // создадим пользователя, запишем в базу с кодом подтверждения в create()
+        $user = $this->create($request->all());
+
+        //генерируем URL подтверждения  
         $url = action('Auth\AuthController@getConfirm', [ $user->activationCode ]); 
 
-//ставим письмо в очередь на отправку
+        //ставим письмо в очередь на отправку
         $mailer->queue('emails.confirm', compact('url', 'user'), function ($message) use ($user, $url) 
         {
             $message->to($user->email)->subject(trans('user.registration_confirmation'));
         });
 
 
-//        return redirect($this->redirectPath());
-	return view('message')->withMessage('user.register_complete');
+        // return redirect($this->redirectPath());
+        return view('message')->withMessage('user.register_complete');
     }
 
     /**
@@ -187,7 +187,7 @@ class AuthController extends Controller
        //записываем в БД
         $user->save();
 
-	Auth::login($user);
+        Auth::login($user);
       
         return redirect($this->redirectPath());
     }
