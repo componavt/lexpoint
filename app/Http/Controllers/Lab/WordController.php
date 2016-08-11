@@ -11,6 +11,15 @@ class WordController extends Controller {
 
 public function index(Request $request) {
 
+    // todo move to one plase (to routes.php?)
+    /*$wikt_lang = 'ru';
+    Piwidict::setWiktLang ($wikt_lang);
+    Piwidict::setDatabaseConnection(env('DB_WIKT_HOST'),
+                                    env('DB_WIKT_USERNAME'),
+                                    env('DB_WIKT_USERPASS'),
+                                    env('DB_WIKT_DATABASE_'.strtoupper($wikt_lang)));
+                                    */
+    
     $search_word = $request->input('search_word');
     $type_search = $request->input('type_search');
     $output_first = $request->input('output_first');

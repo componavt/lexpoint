@@ -1,5 +1,5 @@
 <?php
-/*
+
 use \piwidict\Piwidict;
 
   $wikt_lang = 'ru';
@@ -8,7 +8,7 @@ use \piwidict\Piwidict;
   env('DB_WIKT_USERNAME'),
   env('DB_WIKT_USERPASS'),
   env('DB_WIKT_DATABASE_'.strtoupper($wikt_lang)));
-*/
+
 
 /*
   |--------------------------------------------------------------------------
@@ -79,12 +79,12 @@ Route::group([
             }
         ]
   );
-/*
+  
   Route::get('/socialite/{provider}/callback', function ($provider) {
   $user = \Socialite::driver($provider)->user();
   dd($user);
   });
- */
+  
 
 // Using Github authentication for login with Laravel Socialite
 // https://mattstauffer.co/blog/using-github-authentication-for-login-with-laravel-socialite
@@ -102,3 +102,24 @@ Route::get('lab', function() {
     return view('lab.index');
 });
 
+/////////////////////////////
+// test 
+////////////////////////////
+/*
+Route::get('testdb', function() {
+    Schema::create('test_users', function($table) {
+        $table->increments('id');
+    });
+    
+    Schema::rename('test_users', 'test_users2');
+});
+*/
+
+// todo
+// Integrating Facebook users with our app
+// https://blog.damirmiladinov.com/laravel/laravel-5.2-socialite-facebook-login.html#.V6cnwe3990Q
+
+// $table->string('email')->unique()->nullable()
+// 
+// 
+// ;

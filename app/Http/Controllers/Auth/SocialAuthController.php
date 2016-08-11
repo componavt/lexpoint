@@ -21,7 +21,14 @@ class SocialAuthController extends Controller
 
     public function callback($provider)
     {
-        $user = \Socialite::driver($provider)->user();
+        if($user = $this->socialite->with($provider)->user()){
+            dd($user);
+        }else{
+            return 'something went wrong';
+        }
+        
+        
+        // $user = \Socialite::driver($provider)->user();
 //        dd($user);
 // getId(), getNickname(), getName(), getEmail(), getAvatar()
 /*
